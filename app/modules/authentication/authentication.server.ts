@@ -1,5 +1,6 @@
 import jwt from "jsonwebtoken";
-import { parse as parseCookies } from "cookie";
+import * as cookieLib from "cookie";
+const parseCookies: (str: string) => Record<string, string> = (cookieLib as any).parse ?? (cookieLib as any).default?.parse;
 import type { PublicUser } from "./authentication.types";
 import { UserRole } from "./authentication.types";
 
