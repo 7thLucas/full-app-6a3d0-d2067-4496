@@ -59,72 +59,121 @@ export type TFont = {
   textFont: string;
 };
 
+export type THskLevel = {
+  level: string;
+  description: string;
+  wordCount: number;
+};
+
+export type TFeatureItem = {
+  title: string;
+  description: string;
+  icon: string;
+};
+
 export type TDefaultConfigurableData = {
   appName: string;
   logoUrl: string;
   brandColor: TBrandColor;
   font: TFont;
-  // Mirror new schema fields here. Example:
-  //   maxItemsPerPage?: number;
-  //   enableNotifications?: boolean;
-  //   featuredCategories?: string[];
+  appTagline?: string;
+  appDescription?: string;
+  heroTitle?: string;
+  heroSubtitle?: string;
+  heroCTA?: string;
+  dailyGoalWords?: number;
+  enableStreaks?: boolean;
+  enableAudio?: boolean;
+  enableQuizMode?: boolean;
+  quizOptionsCount?: number;
+  flashcardFrontLabel?: string;
+  flashcardBackLabel?: string;
+  hskLevels?: THskLevel[];
+  features?: TFeatureItem[];
+  footerTagline?: string;
 };
 
 export const defaultConfigurablesData: TDefaultConfigurableData = {
-  appName: "My App",
+  appName: "learnHSK",
   logoUrl: "",
   brandColor: {
     // Base
-    background:        "#ffffff",
-    foreground:        "#09090b",
+    background:        "#FAFAFA",
+    foreground:        "#1A1A1A",
     // Card
-    card:              "#ffffff",
-    cardForeground:    "#09090b",
+    card:              "#FFFFFF",
+    cardForeground:    "#1A1A1A",
     // Popover
-    popover:           "#ffffff",
-    popoverForeground: "#09090b",
+    popover:           "#FFFFFF",
+    popoverForeground: "#1A1A1A",
     // Primary
-    primary:           "#2563eb",
-    primaryForeground: "#ffffff",
+    primary:           "#D93025",
+    primaryForeground: "#FFFFFF",
     // Secondary
-    secondary:           "#f4f4f5",
-    secondaryForeground: "#18181b",
+    secondary:           "#F5A623",
+    secondaryForeground: "#1A1A1A",
     // Muted
-    muted:           "#f4f4f5",
-    mutedForeground: "#71717a",
+    muted:           "#F3F4F6",
+    mutedForeground: "#6B7280",
     // Accent
-    accent:           "#f4f4f5",
-    accentForeground: "#18181b",
+    accent:           "#FEF3C7",
+    accentForeground: "#92400E",
     // Destructive
-    destructive:           "#ef4444",
-    destructiveForeground: "#fafafa",
+    destructive:           "#EF4444",
+    destructiveForeground: "#FFFFFF",
     // Border / Input / Ring
-    border: "#e4e4e7",
-    input:  "#e4e4e7",
-    ring:   "#2563eb",
+    border: "#E5E7EB",
+    input:  "#E5E7EB",
+    ring:   "#D93025",
     // Charts
-    chart1: "#f97316",
-    chart2: "#0d9488",
-    chart3: "#1e3a5f",
-    chart4: "#d4a017",
-    chart5: "#ea580c",
+    chart1: "#D93025",
+    chart2: "#F5A623",
+    chart3: "#22C55E",
+    chart4: "#3B82F6",
+    chart5: "#A855F7",
     // Navbar
-    navbarBackground: "#ffffff",
+    navbarBackground: "#1A1A1A",
     // Sidebar
-    sidebarBackground:        "#fafafa",
-    sidebarForeground:        "#3f3f46",
-    sidebarPrimary:           "#2563eb",
-    sidebarPrimaryForeground: "#ffffff",
-    sidebarAccent:            "#f4f4f5",
-    sidebarAccentForeground:  "#18181b",
-    sidebarBorder:            "#e4e4e7",
-    sidebarRing:              "#2563eb",
+    sidebarBackground:        "#111111",
+    sidebarForeground:        "#F9FAFB",
+    sidebarPrimary:           "#D93025",
+    sidebarPrimaryForeground: "#FFFFFF",
+    sidebarAccent:            "#F5A623",
+    sidebarAccentForeground:  "#1A1A1A",
+    sidebarBorder:            "#2D2D2D",
+    sidebarRing:              "#D93025",
   },
   font: {
-    headingFont: "Plus Jakarta Sans",
-    textFont: "Inter",
+    headingFont: "Poppins",
+    textFont: "Nunito",
   },
-  // ─────────────────────────────────────────────────────────────────────
-  // Add new field defaults here. See RULES.md §5 for per-type shape.
-  // ─────────────────────────────────────────────────────────────────────
+  appTagline: "Master Mandarin, One Card at a Time",
+  appDescription: "A gamified HSK learning app with flashcards, audio, streaks and quizzes for all levels.",
+  heroTitle: "Learn Mandarin the Fun Way",
+  heroSubtitle: "Study HSK vocabulary with interactive flashcards, track your daily streak, and level up from HSK 1 to HSK 6+.",
+  heroCTA: "Start Learning Free",
+  dailyGoalWords: 20,
+  enableStreaks: true,
+  enableAudio: true,
+  enableQuizMode: true,
+  quizOptionsCount: 4,
+  flashcardFrontLabel: "Chinese + Pinyin",
+  flashcardBackLabel: "English + Example",
+  hskLevels: [
+    { level: "HSK 1", description: "150 basic words — greetings, numbers, basic phrases", wordCount: 150 },
+    { level: "HSK 2", description: "300 words — daily conversations and simple sentences", wordCount: 300 },
+    { level: "HSK 3", description: "600 words — intermediate communication", wordCount: 600 },
+    { level: "HSK 4", description: "1200 words — fluent everyday topics", wordCount: 1200 },
+    { level: "HSK 5", description: "2500 words — reading newspapers and films", wordCount: 2500 },
+    { level: "HSK 6+", description: "5000+ words — near-native proficiency", wordCount: 5000 },
+  ],
+  features: [
+    { title: "Flashcard Study", description: "Flip cards with character, pinyin, meaning and audio on every card.", icon: "🃏" },
+    { title: "Daily Streaks", description: "Build a habit with a daily streak counter that keeps you motivated.", icon: "🔥" },
+    { title: "Quiz Mode", description: "Test yourself with multiple-choice quizzes after every study session.", icon: "🎯" },
+    { title: "Audio Pronunciation", description: "Hear native pronunciation for every word with built-in TTS audio.", icon: "🔊" },
+    { title: "Progress Tracking", description: "See how many words you've mastered per HSK level at a glance.", icon: "📊" },
+    { title: "All HSK Levels", description: "Covers HSK 1 through HSK 6+ — from beginner to near-native.", icon: "🎓" },
+  ],
+  footerTagline: "learnHSK — Built for learners, powered by persistence.",
 };

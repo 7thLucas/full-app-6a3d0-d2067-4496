@@ -99,6 +99,37 @@ export const configurableSchemas: ConfigurableSchemas = {
       ],
     },
 
+    // ── learnHSK App Content ────────────────────────────────────────────
+    { fieldName: "appTagline", type: "string", required: false, label: "App Tagline" },
+    { fieldName: "appDescription", type: "string", required: false, label: "App Description" },
+    { fieldName: "heroTitle", type: "string", required: false, label: "Hero Title" },
+    { fieldName: "heroSubtitle", type: "string", required: false, label: "Hero Subtitle" },
+    { fieldName: "heroCTA", type: "string", required: false, label: "Hero CTA Button Label" },
+    { fieldName: "dailyGoalWords", type: "number", required: false, label: "Daily Goal (words)", min: 1, max: 100 },
+    { fieldName: "enableStreaks", type: "boolean", required: false, label: "Enable Streak Tracking" },
+    { fieldName: "enableAudio", type: "boolean", required: false, label: "Enable Audio Pronunciation" },
+    { fieldName: "enableQuizMode", type: "boolean", required: false, label: "Enable Quiz Mode" },
+    { fieldName: "quizOptionsCount", type: "number", required: false, label: "Quiz Answer Options Count", min: 2, max: 6 },
+    { fieldName: "flashcardFrontLabel", type: "string", required: false, label: "Flashcard Front Label" },
+    { fieldName: "flashcardBackLabel", type: "string", required: false, label: "Flashcard Back Label" },
+    { fieldName: "hskLevels", type: "array", required: false, label: "HSK Levels", item: { type: "object", fields: [
+      { fieldName: "level", type: "string", required: true, label: "Level Name" },
+      { fieldName: "description", type: "string", required: false, label: "Level Description" },
+      { fieldName: "wordCount", type: "number", required: false, label: "Total Word Count" },
+    ]}},
+    // ── learnHSK Landing Page ────────────────────────────────────────────
+    {
+      fieldName: "features",
+      type: "array",
+      required: false,
+      label: "Features Section",
+      item: { type: "object", fields: [
+        { fieldName: "title", type: "string", required: true, label: "Feature Title" },
+        { fieldName: "description", type: "string", required: false, label: "Feature Description" },
+        { fieldName: "icon", type: "string", required: false, label: "Feature Icon (emoji)" },
+      ]},
+    },
+    { fieldName: "footerTagline", type: "string", required: false, label: "Footer Tagline" },
     {
       fieldName: "font",
       type: "object",
