@@ -91,6 +91,8 @@ export type TDefaultConfigurableData = {
   hskLevels?: THskLevel[];
   features?: TFeatureItem[];
   footerTagline?: string;
+  dashboardMotivationImageUrl?: string;
+  dashboardMotivationQuote?: string;
 };
 
 export const defaultConfigurablesData: TDefaultConfigurableData = {
@@ -176,4 +178,6 @@ export const defaultConfigurablesData: TDefaultConfigurableData = {
     { title: "All HSK Levels", description: "Covers HSK 1 through HSK 6+ — from beginner to near-native.", icon: "🎓" },
   ],
   footerTagline: "learnHSK — Built for learners, powered by persistence.",
+  dashboardMotivationImageUrl: "https://client-api-stag.quantumbyte.ai/uploads/gpe8hhcl/4496/assets/95c77a31-e42a-4a36-bc76-fe3ccff47397_1782410355397_lvjic4.png",
+  dashboardMotivationQuote: "每天学一点，坚持就是胜利。 — Every day a little more, persistence is victory.",
 };

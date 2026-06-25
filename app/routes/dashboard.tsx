@@ -24,6 +24,8 @@ export default function DashboardPage() {
   const enableStreaks = config?.enableStreaks !== false;
   const dailyGoal = config?.dailyGoalWords ?? 20;
   const appName = config?.appName ?? "learnHSK";
+  const motivationImageUrl = config?.dashboardMotivationImageUrl ?? "";
+  const motivationQuote = config?.dashboardMotivationQuote ?? "";
 
   const maxStreak = progress.reduce((max, p) => Math.max(max, p.streak || 0), 0);
   const totalLearned = progress.reduce((sum, p) => sum + (p.learnedWordIds?.length ?? 0), 0);
@@ -83,6 +85,27 @@ export default function DashboardPage() {
                 />
               </div>
               <p className="text-sm text-muted-foreground">{todayWords} / {dailyGoal} words today</p>
+            </div>
+          </div>
+        )}
+
+        {/* Motivation Banner */}
+        {motivationImageUrl && (
+          <div className="mb-8 rounded-2xl overflow-hidden border border-border bg-card shadow-sm">
+            <div className="relative">
+              <img
+                src={motivationImageUrl}
+                alt="Motivation"
+                className="w-full object-cover max-h-[280px]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-card/90 via-card/30 to-transparent" />
+              {motivationQuote && (
+                <div className="absolute bottom-0 left-0 right-0 px-6 py-5">
+                  <p className="text-foreground font-semibold text-base leading-snug drop-shadow-sm">
+                    {motivationQuote}
+                  </p>
+                </div>
+              )}
             </div>
           </div>
         )}

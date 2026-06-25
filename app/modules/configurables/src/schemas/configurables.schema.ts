@@ -130,6 +130,8 @@ export const configurableSchemas: ConfigurableSchemas = {
       ]},
     },
     { fieldName: "footerTagline", type: "string", required: false, label: "Footer Tagline" },
+    { fieldName: "dashboardMotivationImageUrl", type: "url", required: false, label: "Dashboard Motivation Image URL" },
+    { fieldName: "dashboardMotivationQuote", type: "string", required: false, label: "Dashboard Motivation Quote" },
     {
       fieldName: "font",
       type: "object",
