@@ -16,7 +16,7 @@ learnHSK is a Mandarin Chinese learning web app built around the official HSK cu
 5. **Progress Tracking** — Per-level progress: cards seen, cards mastered, accuracy rate.
 
 ## Brand & Tone
-- Name: HSK Flash
+- Name: learnHSK
 - Palette: Chinese red primary (#C41E3A), deep navy secondary (#1A2942), gold accent (#F5A623)
 - Typography: Outfit (headings), Inter (body)
 - Tone: Focused, encouraging, culturally respectful — serious about learning but not intimidating
