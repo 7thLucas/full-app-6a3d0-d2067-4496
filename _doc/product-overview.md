@@ -1,7 +1,7 @@
-# Product Overview — HSK Flash
+# Product Overview — learnHSK
 
 ## What It Is
-HSK Flash is a Mandarin Chinese learning web app built around the official HSK curriculum (levels 1–6). Learners study vocabulary through interactive flashcards, hear native-quality audio pronunciation for every word, and stay motivated through a daily streak system.
+learnHSK is a Mandarin Chinese learning web app built around the official HSK curriculum (levels 1–6). Learners study vocabulary through interactive flashcards, hear native-quality audio pronunciation for every word, and stay motivated through a daily streak system.
 
 ## Users
 - Mandarin language learners at all stages — beginner (HSK 1) through advanced (HSK 6)
