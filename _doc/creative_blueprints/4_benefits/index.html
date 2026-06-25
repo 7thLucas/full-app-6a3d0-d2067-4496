@@ -1,0 +1,107 @@
+<style>
+.mode-landscape .sl-grid { grid-template-columns: repeat(3, 1fr); }
+.mode-portrait .sl-grid { grid-template-columns: repeat(2, 1fr); }
+.mode-landscape .sl-roi { flex-direction: row; align-items: center; }
+.mode-portrait .sl-roi { flex-direction: column; }
+</style>
+
+<section class="w-full h-full overflow-hidden bg-white">
+  <div class="flex flex-col h-full p-10 gap-5">
+    <!-- Header -->
+    <div>
+      <span class="text-xs font-semibold uppercase tracking-widest block mb-1"
+        style="color: {{config.brandColor.primary}}; font-family: '{{config.font.textFont}}', sans-serif;">
+        Measurable Outcomes
+      </span>
+      <h2 class="text-3xl font-bold"
+        style="color: {{config.brandColor.foreground}}; font-family: '{{config.font.headingFont}}', sans-serif;">
+        Benefits
+      </h2>
+    </div>
+
+    <!-- Metric cards -->
+    <div class="sl-grid grid gap-3">
+      <!-- Metric 1 -->
+      <div class="rounded-xl p-5 flex flex-col gap-1"
+        style="background-color: {{config.brandColor.card}}; border: 1px solid {{config.brandColor.border}};">
+        <span class="text-xs font-semibold uppercase tracking-wider"
+          style="color: {{config.brandColor.mutedForeground}}; font-family: '{{config.font.textFont}}', sans-serif;">
+          Vocabulary Coverage
+        </span>
+        <span class="text-3xl font-bold"
+          style="color: {{config.brandColor.primary}}; font-family: '{{config.font.headingFont}}', sans-serif;">
+          2,500+
+        </span>
+        <span class="text-xs"
+          style="color: {{config.brandColor.mutedForeground}}; font-family: '{{config.font.textFont}}', sans-serif;">
+          Words across all HSK 1–6 levels, matched to official curriculum
+        </span>
+      </div>
+
+      <!-- Metric 2 -->
+      <div class="rounded-xl p-5 flex flex-col gap-1"
+        style="background-color: {{config.brandColor.card}}; border: 1px solid {{config.brandColor.border}};">
+        <span class="text-xs font-semibold uppercase tracking-wider"
+          style="color: {{config.brandColor.mutedForeground}}; font-family: '{{config.font.textFont}}', sans-serif;">
+          Retention Boost
+        </span>
+        <span class="text-3xl font-bold"
+          style="color: {{config.brandColor.primary}}; font-family: '{{config.font.headingFont}}', sans-serif;">
+          ~40%
+        </span>
+        <span class="text-xs"
+          style="color: {{config.brandColor.mutedForeground}}; font-family: '{{config.font.textFont}}', sans-serif;">
+          Higher recall when audio reinforces visual — vs. silent flashcards alone
+        </span>
+      </div>
+
+      <!-- Metric 3 -->
+      <div class="rounded-xl p-5 flex flex-col gap-1"
+        style="background-color: {{config.brandColor.card}}; border: 1px solid {{config.brandColor.border}};">
+        <span class="text-xs font-semibold uppercase tracking-wider"
+          style="color: {{config.brandColor.mutedForeground}}; font-family: '{{config.font.textFont}}', sans-serif;">
+          Daily Habit
+        </span>
+        <span class="text-3xl font-bold"
+          style="color: {{config.brandColor.primary}}; font-family: '{{config.font.headingFont}}', sans-serif;">
+          15 min
+        </span>
+        <span class="text-xs"
+          style="color: {{config.brandColor.mutedForeground}}; font-family: '{{config.font.textFont}}', sans-serif;">
+          Average session length — enough to study 20–30 cards and maintain a streak
+        </span>
+      </div>
+    </div>
+
+    <!-- ROI Summary block -->
+    <div class="sl-roi flex rounded-2xl p-6 gap-6 flex-1"
+      style="background-color: {{config.brandColor.foreground}};">
+      <div class="flex flex-col justify-center gap-2" style="flex: 1;">
+        <span class="text-xs font-semibold uppercase tracking-wider"
+          style="color: {{config.brandColor.accent}}; font-family: '{{config.font.textFont}}', sans-serif;">
+          Learner Value Summary
+        </span>
+        <h3 class="text-2xl font-bold leading-snug"
+          style="color: #FFFFFF; font-family: '{{config.font.headingFont}}', sans-serif;">
+          Structured learning beats unstructured effort — every time.
+        </h3>
+        <p class="text-sm"
+          style="color: #CBD5E1; font-family: '{{config.font.textFont}}', sans-serif;">
+          {{config.appName}} removes the setup cost of traditional study: no card-making, no hunting for audio, no guessing which words matter. Learners arrive and learn.
+        </p>
+      </div>
+      <div class="flex flex-col justify-center gap-3" style="flex: 0.8;">
+        <div class="rounded-xl p-4"
+          style="background-color: rgba(255,255,255,0.07);">
+          <p class="text-xs mb-1" style="color: #94A3B8; font-family: '{{config.font.textFont}}', sans-serif;">Time saved vs. self-built study routine</p>
+          <p class="text-xl font-bold" style="color: #FFFFFF; font-family: '{{config.font.headingFont}}', sans-serif;">~40 min / session</p>
+        </div>
+        <div class="rounded-xl p-4"
+          style="background-color: rgba(196,30,58,0.25);">
+          <p class="text-xs mb-1" style="color: #94A3B8; font-family: '{{config.font.textFont}}', sans-serif;">Streaks drive daily return</p>
+          <p class="text-xl font-bold" style="color: {{config.brandColor.accent}}; font-family: '{{config.font.headingFont}}', sans-serif;">7× more consistent</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
