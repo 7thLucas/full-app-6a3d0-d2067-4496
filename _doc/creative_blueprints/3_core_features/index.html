@@ -1,0 +1,158 @@
+<style>
+.mode-landscape .sl-grid { grid-template-columns: repeat(3, 1fr); }
+.mode-portrait .sl-grid { grid-template-columns: repeat(2, 1fr); }
+</style>
+
+<section class="w-full h-full overflow-hidden bg-white">
+  <div class="flex flex-col h-full p-10 gap-5">
+    <!-- Header -->
+    <div class="flex items-end justify-between">
+      <div>
+        <span class="text-xs font-semibold uppercase tracking-widest block mb-1"
+          style="color: {{config.brandColor.primary}}; font-family: '{{config.font.textFont}}', sans-serif;">
+          What You Get
+        </span>
+        <h2 class="text-3xl font-bold"
+          style="color: {{config.brandColor.foreground}}; font-family: '{{config.font.headingFont}}', sans-serif;">
+          Core Features
+        </h2>
+      </div>
+      <!-- Persona chips -->
+      <div class="flex gap-2">
+        <span class="px-3 py-1 rounded-full text-xs font-semibold"
+          style="background-color: {{config.brandColor.primary}}; color: {{config.brandColor.primaryForeground}}; font-family: '{{config.font.textFont}}', sans-serif;">
+          Beginner
+        </span>
+        <span class="px-3 py-1 rounded-full text-xs font-semibold"
+          style="background-color: {{config.brandColor.muted}}; color: {{config.brandColor.foreground}}; font-family: '{{config.font.textFont}}', sans-serif;">
+          Intermediate
+        </span>
+        <span class="px-3 py-1 rounded-full text-xs font-semibold"
+          style="background-color: {{config.brandColor.muted}}; color: {{config.brandColor.foreground}}; font-family: '{{config.font.textFont}}', sans-serif;">
+          Advanced
+        </span>
+      </div>
+    </div>
+
+    <!-- Feature cards grid -->
+    <div class="sl-grid grid gap-4 flex-1">
+      <!-- Card 1: HSK Levels -->
+      <div class="flex flex-col justify-between rounded-xl p-5"
+        style="background-color: {{config.brandColor.primary}}; color: {{config.brandColor.primaryForeground}};">
+        <div>
+          <div class="text-3xl mb-3">📚</div>
+          <h3 class="text-base font-bold mb-1"
+            style="font-family: '{{config.font.headingFont}}', sans-serif;">
+            HSK 1 – 6 Decks
+          </h3>
+          <p class="text-xs leading-relaxed opacity-90"
+            style="font-family: '{{config.font.textFont}}', sans-serif;">
+            Complete vocabulary sets for every HSK level — exactly aligned to the official exam curriculum.
+          </p>
+        </div>
+        <span class="text-xs font-semibold mt-3 opacity-75"
+          style="font-family: '{{config.font.textFont}}', sans-serif;">
+          2,500+ words covered
+        </span>
+      </div>
+
+      <!-- Card 2: Audio -->
+      <div class="flex flex-col justify-between rounded-xl p-5"
+        style="background-color: {{config.brandColor.foreground}}; color: #FFFFFF;">
+        <div>
+          <div class="text-3xl mb-3">🔊</div>
+          <h3 class="text-base font-bold mb-1"
+            style="font-family: '{{config.font.headingFont}}', sans-serif;">
+            Native Audio Pronunciation
+          </h3>
+          <p class="text-xs leading-relaxed" style="color: #CBD5E1; font-family: '{{config.font.textFont}}', sans-serif;">
+            Every card plays native Mandarin audio so learners hear correct tones — not just read pinyin.
+          </p>
+        </div>
+        <span class="text-xs font-semibold mt-3" style="color: {{config.brandColor.accent}}; font-family: '{{config.font.textFont}}', sans-serif;">
+          Tone-accurate, every card
+        </span>
+      </div>
+
+      <!-- Card 3: Streaks -->
+      <div class="flex flex-col justify-between rounded-xl p-5"
+        style="background-color: {{config.brandColor.accent}}; color: {{config.brandColor.accentForeground}};">
+        <div>
+          <div class="text-3xl mb-3">🔥</div>
+          <h3 class="text-base font-bold mb-1"
+            style="font-family: '{{config.font.headingFont}}', sans-serif;">
+            Daily Streak System
+          </h3>
+          <p class="text-xs leading-relaxed opacity-90"
+            style="font-family: '{{config.font.textFont}}', sans-serif;">
+            Streak counter resets daily — one session keeps it alive. The simplest habit loop that works.
+          </p>
+        </div>
+        <span class="text-xs font-semibold mt-3 opacity-75"
+          style="font-family: '{{config.font.textFont}}', sans-serif;">
+          Drives daily return
+        </span>
+      </div>
+
+      <!-- Card 4: Flashcard UI -->
+      <div class="flex flex-col justify-between rounded-xl p-5"
+        style="background-color: {{config.brandColor.card}}; border: 1px solid {{config.brandColor.border}};">
+        <div>
+          <div class="text-3xl mb-3">🃏</div>
+          <h3 class="text-base font-bold mb-1"
+            style="color: {{config.brandColor.foreground}}; font-family: '{{config.font.headingFont}}', sans-serif;">
+            Flashcard Study Mode
+          </h3>
+          <p class="text-xs leading-relaxed"
+            style="color: {{config.brandColor.mutedForeground}}; font-family: '{{config.font.textFont}}', sans-serif;">
+            Character, pinyin, English meaning, and example sentence — all on one flippable card.
+          </p>
+        </div>
+        <span class="text-xs font-semibold mt-3"
+          style="color: {{config.brandColor.primary}}; font-family: '{{config.font.textFont}}', sans-serif;">
+          Tap to flip
+        </span>
+      </div>
+
+      <!-- Card 5: Level Navigation -->
+      <div class="flex flex-col justify-between rounded-xl p-5"
+        style="background-color: {{config.brandColor.card}}; border: 1px solid {{config.brandColor.border}};">
+        <div>
+          <div class="text-3xl mb-3">🎯</div>
+          <h3 class="text-base font-bold mb-1"
+            style="color: {{config.brandColor.foreground}}; font-family: '{{config.font.headingFont}}', sans-serif;">
+            Level Selector
+          </h3>
+          <p class="text-xs leading-relaxed"
+            style="color: {{config.brandColor.mutedForeground}}; font-family: '{{config.font.textFont}}', sans-serif;">
+            Jump to your current HSK level or review lower levels to reinforce foundations.
+          </p>
+        </div>
+        <span class="text-xs font-semibold mt-3"
+          style="color: {{config.brandColor.primary}}; font-family: '{{config.font.textFont}}', sans-serif;">
+          HSK 1 → 6
+        </span>
+      </div>
+
+      <!-- Card 6: Progress -->
+      <div class="flex flex-col justify-between rounded-xl p-5"
+        style="background-color: {{config.brandColor.card}}; border: 1px solid {{config.brandColor.border}};">
+        <div>
+          <div class="text-3xl mb-3">📈</div>
+          <h3 class="text-base font-bold mb-1"
+            style="color: {{config.brandColor.foreground}}; font-family: '{{config.font.headingFont}}', sans-serif;">
+            Progress Tracking
+          </h3>
+          <p class="text-xs leading-relaxed"
+            style="color: {{config.brandColor.mutedForeground}}; font-family: '{{config.font.textFont}}', sans-serif;">
+            Per-level stats: cards seen, cards mastered, accuracy rate — so learners know exactly where they stand.
+          </p>
+        </div>
+        <span class="text-xs font-semibold mt-3"
+          style="color: {{config.brandColor.primary}}; font-family: '{{config.font.textFont}}', sans-serif;">
+          Per-level insights
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
