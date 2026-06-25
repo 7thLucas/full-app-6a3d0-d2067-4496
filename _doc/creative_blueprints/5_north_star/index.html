@@ -1,0 +1,145 @@
+<style>
+.mode-landscape .sl-body { flex-direction: row; }
+.mode-portrait .sl-body { flex-direction: column; }
+.mode-landscape .sl-left { width: 52%; }
+.mode-landscape .sl-right { width: 48%; }
+.mode-portrait .sl-left { width: 100%; }
+.mode-portrait .sl-right { width: 100%; }
+</style>
+
+<section class="w-full h-full overflow-hidden bg-white">
+  <div class="flex flex-col h-full p-10 gap-4">
+
+    <!-- Header row -->
+    <div class="flex items-start justify-between">
+      <div>
+        <span class="text-xs font-semibold uppercase tracking-widest block mb-1"
+          style="color: {{config.brandColor.primary}}; font-family: '{{config.font.textFont}}', sans-serif;">
+          North Star Metric
+        </span>
+        <h2 class="text-3xl font-bold"
+          style="color: {{config.brandColor.foreground}}; font-family: '{{config.font.headingFont}}', sans-serif;">
+          Weekly Verified Operations
+        </h2>
+      </div>
+      <span class="px-3 py-1 rounded-full text-xs font-semibold mt-1"
+        style="background-color: {{config.brandColor.muted}}; color: {{config.brandColor.mutedForeground}}; font-family: '{{config.font.textFont}}', sans-serif;">
+        Projected impact — based on your inputs
+      </span>
+    </div>
+
+    <!-- Body: left formula + right value -->
+    <div class="sl-body flex flex-1 gap-5">
+
+      <!-- Left: Operation definition + formula -->
+      <div class="sl-left flex flex-col gap-4">
+        <!-- Operation definition -->
+        <div class="rounded-xl p-5"
+          style="background-color: {{config.brandColor.card}}; border: 1px solid {{config.brandColor.border}};">
+          <p class="text-xs font-semibold uppercase tracking-wider mb-2"
+            style="color: {{config.brandColor.primary}}; font-family: '{{config.font.textFont}}', sans-serif;">
+            The Verified Operation
+          </p>
+          <p class="text-base font-bold mb-1"
+            style="color: {{config.brandColor.foreground}}; font-family: '{{config.font.headingFont}}', sans-serif;">
+            Flashcard Session Completed
+          </p>
+          <p class="text-xs leading-relaxed"
+            style="color: {{config.brandColor.mutedForeground}}; font-family: '{{config.font.textFont}}', sans-serif;">
+            A real learner completes a study session — cards reviewed, audio played, streak maintained. Clicks and page views don't count.
+          </p>
+        </div>
+
+        <!-- WVO formula -->
+        <div class="rounded-xl p-5 flex flex-col gap-3"
+          style="background-color: {{config.brandColor.card}}; border: 1px solid {{config.brandColor.border}};">
+          <p class="text-xs font-semibold uppercase tracking-wider"
+            style="color: {{config.brandColor.primary}}; font-family: '{{config.font.textFont}}', sans-serif;">
+            WVO Formula
+          </p>
+          <!-- Inputs -->
+          <div class="flex flex-col gap-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs" style="color: {{config.brandColor.mutedForeground}}; font-family: '{{config.font.textFont}}', sans-serif;">Active learners</span>
+              <span class="px-2 py-0.5 rounded text-xs font-semibold"
+                style="background-color: {{config.brandColor.accent}}; color: {{config.brandColor.accentForeground}}; font-family: '{{config.font.textFont}}', sans-serif;">
+                100 — Assumption, adjust this
+              </span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-xs" style="color: {{config.brandColor.mutedForeground}}; font-family: '{{config.font.textFont}}', sans-serif;">Sessions per learner / week</span>
+              <span class="px-2 py-0.5 rounded text-xs font-semibold"
+                style="background-color: {{config.brandColor.accent}}; color: {{config.brandColor.accentForeground}}; font-family: '{{config.font.textFont}}', sans-serif;">
+                5 — Assumption, adjust this
+              </span>
+            </div>
+          </div>
+          <!-- Formula result -->
+          <div class="flex items-center gap-2 pt-2"
+            style="border-top: 1px solid {{config.brandColor.border}};">
+            <span class="text-xs" style="color: {{config.brandColor.mutedForeground}}; font-family: '{{config.font.textFont}}', sans-serif;">100 × 5 =</span>
+            <span class="text-xl font-bold"
+              style="color: {{config.brandColor.primary}}; font-family: '{{config.font.headingFont}}', sans-serif;">
+              500 sessions / week
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Value projection -->
+      <div class="sl-right flex flex-col gap-4">
+        <!-- Value per operation -->
+        <div class="rounded-xl p-5"
+          style="background-color: {{config.brandColor.card}}; border: 1px solid {{config.brandColor.border}};">
+          <p class="text-xs font-semibold uppercase tracking-wider mb-3"
+            style="color: {{config.brandColor.primary}}; font-family: '{{config.font.textFont}}', sans-serif;">
+            Value per Operation
+          </p>
+          <div class="flex flex-col gap-1 text-xs"
+            style="color: {{config.brandColor.mutedForeground}}; font-family: '{{config.font.textFont}}', sans-serif;">
+            <p>40 min saved / session (vs. building own study routine)</p>
+            <p>× $20 / hr estimated learner time value</p>
+            <p style="color: {{config.brandColor.foreground}}; font-weight: 600;">= $13.33 value / session</p>
+          </div>
+        </div>
+
+        <!-- Total value -->
+        <div class="rounded-2xl p-5 flex flex-col gap-3 flex-1"
+          style="background-color: {{config.brandColor.foreground}};">
+          <p class="text-xs font-semibold uppercase tracking-wider"
+            style="color: {{config.brandColor.accent}}; font-family: '{{config.font.textFont}}', sans-serif;">
+            Projected Total Value
+          </p>
+          <div class="flex flex-col gap-1">
+            <div class="flex items-baseline gap-2">
+              <span class="text-3xl font-bold"
+                style="color: #FFFFFF; font-family: '{{config.font.headingFont}}', sans-serif;">
+                $6,665
+              </span>
+              <span class="text-sm" style="color: #94A3B8; font-family: '{{config.font.textFont}}', sans-serif;">/ week</span>
+            </div>
+            <p class="text-xs" style="color: #94A3B8; font-family: '{{config.font.textFont}}', sans-serif;">
+              500 sessions × $13.33
+            </p>
+          </div>
+          <div style="border-top: 1px solid rgba(255,255,255,0.1);" class="pt-3">
+            <div class="flex items-baseline gap-2">
+              <span class="text-2xl font-bold"
+                style="color: {{config.brandColor.accent}}; font-family: '{{config.font.headingFont}}', sans-serif;">
+                $346,580
+              </span>
+              <span class="text-sm" style="color: #94A3B8; font-family: '{{config.font.textFont}}', sans-serif;">/ year</span>
+            </div>
+            <p class="text-xs mt-1" style="color: #94A3B8; font-family: '{{config.font.textFont}}', sans-serif;">
+              $6,665 × 52 weeks
+            </p>
+          </div>
+          <p class="text-xs mt-2 pt-2"
+            style="border-top: 1px solid rgba(255,255,255,0.1); color: #64748B; font-family: '{{config.font.textFont}}', sans-serif;">
+            Projections based on assumption inputs above — adjust learner count and session frequency to match your actual numbers.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
