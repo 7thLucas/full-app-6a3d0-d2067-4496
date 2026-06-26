@@ -12,8 +12,10 @@ learnHSK is a Mandarin Chinese learning web app built around the official HSK cu
 1. **HSK Flashcards (all levels)** — Full vocabulary decks for HSK 1, 2, 3, 4, 5, and 6. Each card shows Chinese character, pinyin, English meaning, and example sentence.
 2. **Audio Pronunciation** — Native Mandarin audio plays on every card so learners hear correct tones as they study.
 3. **Daily Streak Tracking** — Users earn and maintain a daily streak for each study session. Streak is displayed prominently to reinforce habit formation.
-4. **Level Navigation** — Clear level selector (HSK 1–6) so users can jump to their current proficiency level or review lower levels.
-5. **Progress Tracking** — Per-level progress: cards seen, cards mastered, accuracy rate.
+4. **Quiz Mode** — Multiple-choice quizzes (4 options) after study sessions to test vocabulary recall.
+5. **Level Navigation** — Clear level selector (HSK 1–6) so users can jump to their current proficiency level or review lower levels.
+6. **Progress Tracking** — Per-level progress: cards seen, cards mastered, accuracy rate.
+7. **Dashboard Motivation Banner** — Configurable image + quote on the learner dashboard to reinforce daily habit.
 
 ## Brand & Tone
 - Name: learnHSK
