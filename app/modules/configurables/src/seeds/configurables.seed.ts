@@ -12,6 +12,20 @@ export async function seedConfigurables(): Promise<void> {
     // Check if a singleton already exists
     const existing = await ConfigurableModel.findOne({ _singleton: true });
     if (existing) {
+      // Backfill any keys added to defaults after singleton was first created
+      const data = existing.configurable_data as Record<string, unknown>;
+      let patched = false;
+      for (const key of Object.keys(defaultConfigurablesData) as Array<keyof typeof defaultConfigurablesData>) {
+        if (data[key] === undefined || data[key] === null) {
+          data[key] = defaultConfigurablesData[key];
+          patched = true;
+        }
+      }
+      if (patched) {
+        existing.markModified("configurable_data");
+        await existing.save();
+        logger.info("✅ Configurables backfilled with new default keys");
+      }
       return;
     }
 
