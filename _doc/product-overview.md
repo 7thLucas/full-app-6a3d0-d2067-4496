@@ -30,8 +30,12 @@ learnHSK is a Mandarin Chinese learning web app built around the official HSK cu
 - Mobile-first UI: flashcards work cleanly on phone screens
 - No account required to start; progress is stored locally until sign-up
 
-## Scope (MVP)
-- Flashcard study mode for HSK 1–6
+## Scope (Shipped)
+- Flashcard study mode for all 6 HSK levels — real vocabulary seeded for every level (HSK 1–6)
 - Audio playback per card
 - Daily streak counter
-- Level selector and per-level progress summary
+- Level selector with per-level progress summary (words learned / total per level)
+- Quiz Mode (multiple-choice, 4 options) per level
+- Full auth flow (register, login, session)
+- Admin panel for adding/managing vocabulary
+- Dashboard motivation banner (configurable image + quote)
