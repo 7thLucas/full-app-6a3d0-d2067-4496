@@ -9,25 +9,26 @@ import { hsk6Words } from "../data/hsk6-words";
 
 const logger = createLogger("HskSeed");
 
-const levelData: Record<number, typeof hsk1Words> = {
-  1: hsk1Words,
-  2: hsk2Words,
-  3: hsk3Words,
-  4: hsk4Words,
-  5: hsk5Words,
-  6: hsk6Words,
-};
+const allWordsByLevel = [
+  { level: 1, words: hsk1Words },
+  { level: 2, words: hsk2Words },
+  { level: 3, words: hsk3Words },
+  { level: 4, words: hsk4Words },
+  { level: 5, words: hsk5Words },
+  { level: 6, words: hsk6Words },
+];
 
 export async function seedHskWords(): Promise<void> {
   try {
-    for (const level of [1, 2, 3, 4, 5, 6]) {
-      const count = await HskWordModel.countDocuments({ hskLevel: level });
-      if (count === 0) {
-        const words = levelData[level];
-        await HskWordModel.insertMany(words);
-        logger.info(`✅ Seeded ${words.length} HSK level ${level} words.`);
+    for (const { level, words } of allWordsByLevel) {
+      const existingChars = await HskWordModel.distinct("chinese", { hskLevel: level });
+      const existingSet = new Set(existingChars);
+      const toInsert = words.filter((w) => !existingSet.has(w.chinese));
+      if (toInsert.length > 0) {
+        await HskWordModel.insertMany(toInsert);
+        logger.info(`✅ Added ${toInsert.length} new words for HSK ${level}`);
       } else {
-        logger.info(`HSK level ${level} already seeded (${count} words), skipping.`);
+        logger.info(`HSK level ${level} up to date (${existingChars.length} words)`);
       }
     }
   } catch (error) {
