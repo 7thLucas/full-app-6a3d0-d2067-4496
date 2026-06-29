@@ -18,7 +18,7 @@ Learn w Angel is a Mandarin Chinese learning web app built around the official H
 7. **Dashboard Motivation Banner** — Configurable image + quote on the learner dashboard to reinforce daily habit.
 
 ## Brand & Tone
-- Name: learnHSK
+- Name: Learn w Angel
 - Palette: Chinese red primary (#C41E3A), deep navy secondary (#1A2942), gold accent (#F5A623)
 - Typography: Outfit (headings), Inter (body)
 - Tone: Focused, encouraging, culturally respectful — serious about learning but not intimidating
